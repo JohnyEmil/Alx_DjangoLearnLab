@@ -1,7 +1,7 @@
 from django.shortcuts import render
-from django.views.generic import ListView, DetailView
+from django.views.generic import DetailView
 from django.urls import reverse_lazy
-from .models import Author, Book, Library, Librarian
+from .models import  Book, Library
 
 # Create your views here.
 def book_list(request):
