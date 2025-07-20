@@ -7,8 +7,8 @@ librarian = models.Librarian
 
 def get_books_by_author(author_name):
     try:
-        author_instance = models.Author.objects.get(name=author_name)
-        return author_instance.book_set.all()
+        author = models.Author.objects.get(name=author_name)
+        return book.objects.filter(author=author)
     except models.Author.DoesNotExist:
         return book.objects.none()
     
@@ -27,4 +27,3 @@ def get_librarian_of_library(library_name):
         return None
     except models.Librarian.DoesNotExist:
         return None
-
