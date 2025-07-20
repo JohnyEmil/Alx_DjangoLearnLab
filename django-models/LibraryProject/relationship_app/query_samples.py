@@ -21,9 +21,9 @@ def get_books_in_library(library_name):
     
 def get_librarian_of_library(library_name):
     try:
-        library_instance = models.Library.objects.get(name=library_name)
-        return library_instance.librarian
-    except models.Library.DoesNotExist:
-        return None
+      librarian_instance = models.Librarian.objects.get(library=library_name)
+      return librarian_instance.name
     except models.Librarian.DoesNotExist:
-        return None
+      return None
+
+
