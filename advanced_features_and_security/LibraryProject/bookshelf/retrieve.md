@@ -1,5 +1,11 @@
 from bookshelf.models import Book
-book = Book.objects.get(title="1984")
-book.title
-book.author
-book.publication_year
+
+#Retrieving the books
+books = Book.objects.get.all()                                 
+
+#iterating through the records of the books
+for book in books:
+    print(book.title, book.author, book.publication_year)       
+
+#Expected outcome
+1984 George Orwell 1949
